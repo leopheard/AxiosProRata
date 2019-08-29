@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.axiosprorata" name="Axios: Pro Rata" version="1.0.0" provider-name="leopheard">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.xbmcswift2" version="2.4.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.1"/>
+    <import addon="script.module.requests" version="1.1.0"/>
+    <import addon="script.module.routing" version="0.2.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language>en_us</language>
+    <summary lang="en">Axios: Pro Rata</summary>
+    <description lang="en">Get smarter, faster on the most talked-about topics in tech, business and politics in just 10 minutes. Hosted by Axios' business editor, Dan Primack</description>
+    <license>The MIT License (MIT)</license>
+    <forum></forum>
+    <email>leopheard@gmail.com</email>
+    <source>https://github.com/leopheard/AxiosProRata</source>
+    <website>https://www.axios.com/tag/pro-rata-podcast</website>
+        	<assets>
+			<icon>resources/media/icon.jpg</icon>
+			<fanart>resources/media/fanart.png</fanart>
+			<screenshot>resources/media/1.png</screenshot>
+			<screenshot>resources/media/fanart.png</screenshot>
+			<screenshot>resources/media/icon.jpg</screenshot>
+		</assets>
+  </extension>
+</addon>
