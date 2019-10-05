@@ -7,12 +7,11 @@ def get_soup(url):
     soup = BeautifulSoup(page.text, 'html.parser')
     print("type: ", type(soup))
     return soup
-get_soup("https://feeds.megaphone.fm/pro-rata")
 
 def get_playable_podcast(soup):
     subjects = []
     for content in soup.find_all('item'):
-        try:        
+        try:
             link = content.find('enclosure')
             link = link.get('url')
             print("\n\nLink: ", link)
@@ -43,7 +42,7 @@ def compile_playable_podcast(playable_podcast):
 def get_playable_podcast1(soup):
     subjects = []
     for content in soup.find_all('item', limit=10):
-        try:        
+        try:
             link = content.find('enclosure')
             link = link.get('url')
             print("\n\nLink: ", link)
@@ -58,7 +57,7 @@ def get_playable_podcast1(soup):
                 'title': title,
                 'thumbnail': "https://megaphone-prod.s3.amazonaws.com/podcasts/c11bb198-0ed5-11e9-b104-23783a81f42d/image/53aa1a75b60e36e8a5daaa6f9fde44382b12e7d7db1ee809e53544ddb1cc2126a09b70662657dfa250798d6ffc0f75f332b7bc6e0a6d1fa3009a965dbab2920f.jpeg",
         }
-        subjects.append(item) 
+        subjects.append(item)
     return subjects
 def compile_playable_podcast1(playable_podcast1):
     items = []

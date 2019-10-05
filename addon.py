@@ -3,7 +3,6 @@ from resources.lib import mainaddon
 
 plugin = Plugin()
 URL = "https://feeds.megaphone.fm/pro-rata"
-
 @plugin.route('/')
 def main_menu():
     items = [
